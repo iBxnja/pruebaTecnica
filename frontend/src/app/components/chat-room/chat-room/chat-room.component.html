@@ -1,0 +1,12 @@
+<div class="chat-container w-full h-screen bg-neutral-200 flex items-center justify-start flex-col">
+    <div class="w-full h-20 bg-blue-500 text-white font-bold flex items-center justify-start text-4xl">
+      <span class="mx-5">Sala {{ roomName }}</span>
+    </div>
+    <div class="messages flex w-full" *ngFor="let message of messages">
+      <p class="w-full flex items-start justify-start m-5 text-xl font-thin">{{ message }}</p>
+    </div>
+  
+    <input type="text" [(ngModel)]="message" class="w-11/12 absolute bottom-28 p-5 h-20" placeholder="Escribe un mensaje" />
+    <button (click)="sendMessage()" class="w-11/12 h-20 rounded-3xl bg-blue-500 absolute bottom-4 text-xl font-bold text-white">Enviar</button>
+  </div>
+  
